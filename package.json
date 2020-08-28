@@ -1,5 +1,5 @@
 {
-  "name": "Simon Says Blog",
+  "name": "SBlog",
   "version": "1.0.0",
   "description": "React Blog application for anyone.",
   "scripts": {
@@ -63,6 +63,8 @@
     "react-redux": "7.2.0",
     "react-router": "5.1.2",
     "react-router-dom": "5.1.2",
+    "react-switch": "5.0.1",
+    "react-router-active-component": "4.0.0",
     "redux": "4.0.5",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.21.0",
