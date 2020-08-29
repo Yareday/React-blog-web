@@ -10,10 +10,10 @@ export default class Portcontainer extends Component {
       pageTitle: "Welcome to my portfolio",
       isLoading: false,
       data: [
-      { title: "Home", category: "eCommerce" },
-      { title: "About", category: "Chatapp" },
-      { title: "Blog", category: "LMS" },
-      { title: "My Blogs", category: "eCommerce" }
+      { title: "Past", category: "eCommerce", slug: 'Past' },
+      { title: "Present", category: "Chatapp", slug: 'Present' },
+      { title: "Future", category: "LMS", slug: 'Future' },
+      { title: "Distant", category: "eCommerce", slug: 'Distant' }
       
     ]
   };
@@ -29,7 +29,7 @@ data: this.state.data.filter(item =>{
   portfolioItems() {
     
     return this.state.data.map(item =>{
-      return <PortfolioItem title={item.title} url={"google.com"} />;
+      return <PortfolioItem title={item.title} url={"google.com"} slug={item.slug}/>;
     })
   }
 
