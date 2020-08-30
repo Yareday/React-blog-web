@@ -1,7 +1,10 @@
 import React, { Component } from "react";
+import axios from "axios";
 
 import PortfolioItem from "./port-item";
+
 export default class Portcontainer extends Component {
+  
   constructor(){
     super();
 
@@ -9,13 +12,7 @@ export default class Portcontainer extends Component {
     this.state={
       pageTitle: "Welcome to my portfolio",
       isLoading: false,
-      data: [
-      { title: "Past", category: "eCommerce", slug: 'Past' },
-      { title: "Present", category: "Chatapp", slug: 'Present' },
-      { title: "Future", category: "LMS", slug: 'Future' },
-      { title: "Distant", category: "eCommerce", slug: 'Distant' }
-      
-    ]
+      data: []
   };
   this.handleFilter = this.handleFilter.bind(this);
 }
@@ -26,33 +23,56 @@ data: this.state.data.filter(item =>{
 })
 });
 }
+getPortfolioItems() {
+  axios
+  .get("https://simontes.devcamp.space/portfolio/portfolio_items")
+  .then(response => {
+   
+    this.setState({
+      data: response.data.portfolio_items
+    });
+ })
+.catch(error => {
+  console.log(error);
+});
+     }
   portfolioItems() {
-    
-    return this.state.data.map(item =>{
-      return <PortfolioItem title={item.title} url={"google.com"} slug={item.slug}/>;
+  
+      return this.state.data.map(item =>{
+             return  <PortfolioItem
+              key={item.id}
+              item={item} 
+             
+             />;
+      
     })
   }
-
+componentDidMount(){
+  this.getPortfolioItems();
+}
+ 
   
   render() {
     if (this.state.isLoading) {
       return <div>Loading...</div>;
     }
 
-    return (
-      <div>
-        <h2>{this.state.pageTitle}</h2>
-        <button onClick={() => this.handleFilter('eCommerce')}>
-          eCommerce</button>
-        <button onClick={() => this.handleFilter('Chatapp')}>
-          Chatapp</button>
-        <button onClick={() => this.handleFilter('LMS')}>
-          LMS</button>
-        {this.portfolioItems()}
-     <hr/>
+    return (   
+             
+          <div className="portfolio-items-wrapper">
+         <button className="btn" onClick={() => this.handleFilter('eCommerce')}>
+          Lifestyle</button>
+        <button className="btn" onClick={() => this.handleFilter('Chatapp')}>
+          Technology</button>
+        <button className="btn" onClick={() => this.handleFilter('LMS')}>
+          News</button>
+          
+        
+        {this.portfolioItems()}</div>
+     
 
     
-     </div> 
+     
     
     );
   }

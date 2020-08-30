@@ -1,0 +1,20 @@
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.nav-wrapper .left-side {
+  display: flex;
+}
+.nav-wrapper .nav-link-wrapper {
+  height: 22px;
+  border-bottom: 1px solid transparent;
+  transition: 0.5s ease-in-out;
+}
+.nav-wrapper .nav-link-wrapper a {
+  color: black;
+  text-decoration: none;
+}
+.nav-wrapper .nav-link-wrapper:hover {
+  border-bottom: 1px solid black;
+}
