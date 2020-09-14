@@ -32,18 +32,20 @@ export default class Login extends Component {
         { withCredentials: true }
         ).then(response => {
             if (response.data.status === 'created') {
-                
-                console.log("You can come in...");
+                this.props.handleSuccessfulAuth();
+               
             } else {
                 this.setState({
                     errorText:"Wrong email or password"
                 });
+                this.props.handleUnsuccessfulAuth();
             }
         })
         .catch(error => {
             this.setState({
                 errorText: "An error Occured"
-            })
+            });
+            this.props.handleUnsuccessfulAuth();
         });
         
         event.preventDefault();
@@ -52,7 +54,7 @@ export default class Login extends Component {
     render() {
         return(
             <div>
-                <h1> LOGIN TO ACCESS YOUR DASHBOARD</h1>
+                <h2> LOGIN TO ACCESS YOUR DASHBOARD</h2>
                 <div>{this.state.errorText}</div>
                 <form onSubmit={this.handleSubmit}>
                   <input 
