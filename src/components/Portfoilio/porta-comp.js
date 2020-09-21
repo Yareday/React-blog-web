@@ -62,9 +62,9 @@ componentDidMount(){
           <div className="portfolio-items-wrapper">
          <button className="btn" onClick={() => this.handleFilter('eCommerce')}>
           Lifestyle</button>
-        <button className="btn" onClick={() => this.handleFilter('Chatapp')}>
+        <button className="btn" onClick={() => this.handleFilter('Scheduling')}>
           Technology</button>
-        <button className="btn" onClick={() => this.handleFilter('LMS')}>
+        <button className="btn" onClick={() => this.handleFilter('Enterprise')}>
           News</button>
           
         

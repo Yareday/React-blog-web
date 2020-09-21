@@ -60,6 +60,7 @@ const NavigationComponent = (props) => {
              
            </div>
            
+           
                 <div className="right-side">
                 SIMON HAGOS
                 {props.loggedInStatus === "LOGGED_IN" ? (
