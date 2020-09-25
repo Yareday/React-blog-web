@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 import axios from 'axios';
 
+ 
 
 import NavigationContainer from "./navigation/navigation-container";
 import home from "./pages/home";
@@ -16,7 +17,11 @@ import blog from "./pages/blog";
 import PortfolioManager from  "./pages/portfolio-manager";
 import PortfolioDetail from "./Portfoilio/portfolio-detail";
 import Auth from "./pages/auth";
+import facebook from "./pages/facebook";
+
 import NoMatch from "./pages/no-match";
+
+
 export default class App extends Component {
  constructor(props){
   super(props);
@@ -114,6 +119,8 @@ authorizedPages() {
              <Route path="/about-me" component={about} />
              <Route path="/contact" component={contact} />
              <Route path="/blog" component={blog} />
+             <Route path="/facebook" component={facebook} />
+             
              { this.state.loggedInStatus === "LOGGED_IN" ? (
                this.authorizedPages()
              ) : null}
@@ -123,12 +130,21 @@ authorizedPages() {
          <Route component={NoMatch} />
           </Switch>
           </div>
+
+          
         </Router>  
+       
+ 
       
       
      </div>
       
 
     );
+    
   }
+  
 }
+
+
+ 

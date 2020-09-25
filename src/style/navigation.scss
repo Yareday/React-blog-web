@@ -1,16 +1,32 @@
 .nav-wrapper{
-    background-color: #ffffff; 
+    background-color: burlywood; 
     display:flex;
     justify-content: space-between;
     padding:30px;
     .left-side{
         display:flex;
     }
+    .right-side{
+        display:grid;
+        
+        grid-template-columns: 1fr 1fr;
+      
+        .linko{
+           text-decoration-color: rgb(212, 166, 105);
+        }
+        .active {
+            color: $grey;
+            font-size: 1rem;
+            line-height: 1.6rem;
+            text-decoration: none;
+          }
+        
+    }
     .nav-link-wrapper{
         height:22px;
         border-bottom: 1px solid transparent;
         transition:0.5s ease-in-out;
-
+        
         margin-right:20px;
         text-transform: uppercase;
         font-size: 0.9rem;

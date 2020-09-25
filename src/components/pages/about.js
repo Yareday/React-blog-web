@@ -1,10 +1,14 @@
-
 import React from 'react';
+import { Link } from "react-router-dom";
 
 export default function() {
     return(
         <div>
-            About
+            <h2>Blog</h2>
+        <div>
+            <Link to="/Facebook">Login</Link>
         </div>
+        </div>
+
     );
 }

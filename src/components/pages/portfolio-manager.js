@@ -15,8 +15,7 @@ export default class PortfolioManager extends Component {
        };
        this.handleSuccessfulFormSubmission = this.handleSuccessfulFormSubmission.bind(this);
        this.handleFormSubmissionError =this.handleFormSubmissionError.bind(this);
-       this.handleSocialLogin=this.handleSocialLogin.bind(this);
-       this.handleSocialLoginFailure=this.handleSocialLoginFailure.bind(this);
+      
    }
    handleSuccessfulFormSubmission(portfolioItem){
 this.setState({

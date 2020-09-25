@@ -57,7 +57,7 @@ export default class Login extends Component {
             <div>
                 
                 <div>{this.state.errorText}</div>
-                <form onSubmit={this.handleSubmit} id="myform" method="post">
+                <form onSubmit={this.handleSubmit}>
                  
                   
                 
@@ -66,11 +66,6 @@ export default class Login extends Component {
                   
                  
                 </form>
-                <script>
-                    function myform {
-                          document.myform.submit()
-                    }
-                </script>
                
             </div>
             

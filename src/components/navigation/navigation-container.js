@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { withRouter } from "react-router";
 import { NavLink } from 'react-router-dom';
+
 const NavigationComponent = (props) => {
     const dynamicLink = (route, linkText) => {
         return(
@@ -26,6 +27,7 @@ const NavigationComponent = (props) => {
             console.log("Error signing out", error);
         });
     };
+   
  
 
         return(
@@ -52,6 +54,7 @@ const NavigationComponent = (props) => {
                 Blog
             </NavLink>
            </div>
+           
 
                
                {props.loggedInStatus === "LOGGED_IN" ? (
@@ -62,12 +65,20 @@ const NavigationComponent = (props) => {
            
            
                 <div className="right-side">
-                SIMON HAGOS
                 {props.loggedInStatus === "LOGGED_IN" ? (
-                <a onClick={handleSignOut}>SignOut</a> 
+               <a>Welcome &nbsp;  </a> 
+                ): null }
+               
+                {props.loggedInStatus === "LOGGED_IN" ? (
+                <button onClick={handleSignOut}>SignOut</button> 
+                ): null }
+               
+                {props.loggedInStatus !== "LOGGED_IN" ? (
+                 <NavLink exact to="/auth" className="active" >LOGIN </NavLink>
                 ): null }
                 </div>
-            </div>
+                </div>
+            
         );
     };
  

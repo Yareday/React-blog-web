@@ -37,7 +37,7 @@ this.setState({portfolioItemClass:""});
           <img src={logo_url}/>
           </div>
 
-          <Link to="/about-me" className="subtitle">{description}</Link>
+          <Link to="/blog" className="subtitle">{description}</Link>
         </div>
       </div>
       
