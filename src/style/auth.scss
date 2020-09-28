@@ -1,3 +1,45 @@
+.fbstyle{
+button{
+    height:50px;
+    width:300px;
+    font-size:15px;
+    
+    font-family: 'Titillium Web', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+}
+.ggstyle{
+    button{
+        height:50px;
+        width:300px;
+        font-size:50px;
+        
+        color:rgb(255, 255, 255);
+        
+            display:flex;
+    justify-content:center;
+    align-items:center;
+        
+    }
+    }
+.gitstyle{
+        button{
+            height:50px;
+            width:300px;
+            font-size:16px;
+            
+            color:rgb(248, 239, 239);
+            background-color:rgb(32, 28, 28);
+            font-family: 'Titillium Web', sans-serif;
+            display:flex;
+    justify-content:center;
+    align-items:center;
+            
+        }
+        }
 .fby{
     display:flex;
     justify-content: center;

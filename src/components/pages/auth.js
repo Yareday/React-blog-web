@@ -85,13 +85,13 @@ render() {
         
     }else {
         fbContent = (
-            <FacebookLogin
+           <div className="fbstyle"> <FacebookLogin
   appId="643048623016626"
   autoLoad={false}
   fields="name,email,picture"
   onClick={this.componentClicked}
   callback={this.responseFacebook}
-  onFailure= {console.error()} />
+  onFailure= {console.error()} /></div>
         );
   
     
@@ -111,14 +111,14 @@ render() {
       
   }else {
       ggContent = (
-        <GoogleLogin
+        <div className="ggstyle"> <GoogleLogin
         clientId="976076546959-79kbamuou60mm9elj5kev1jusd7k1ufh.apps.googleusercontent.com"
         buttonText="LOGIN WITH GOOGLE"
         autoLoad={false}
         onSuccess={this.responseGoogle}
         onFailure= {console.error()}
         cookiePolicy={'single_host_origin'}
-        />
+        /></div>
 
 
       );
@@ -138,13 +138,13 @@ render() {
     
 }else {
     gitContent = (
-        <GitHubLogin 
+        <div className="gitstyle"> <GitHubLogin 
         clientId="27cf9ccae112c4c8d79a"
         autoLoad={false}
         buttonText="LOGIN WITH GITHUB"
         redirectUri="http://localhost:3000/auth"
     onSuccess={this.onSuccess}
-    onFailure= {console.error()}/>
+    onFailure= {console.error()}/></div>
     );
 
 
