@@ -1,13 +1,16 @@
 .nav-wrapper{
-    background-color: burlywood; 
+    background-color: '#00000000';
     display:flex;
     justify-content: space-between;
     padding:30px;
+    font-family: 'Titillium Web', sans-serif;
     .left-side{
         display:flex;
+        
     }
     .right-side{
         display:grid;
+        opacity:100;
         
         grid-template-columns: 1fr 1fr;
       
@@ -15,7 +18,7 @@
            text-decoration-color: rgb(212, 166, 105);
         }
         .active {
-            color: $grey;
+            color: orange;
             font-size: 1rem;
             line-height: 1.6rem;
             text-decoration: none;
@@ -33,7 +36,7 @@
         
        .nav-link-active{
         border-bottom: 1px solid black;
-        border-spacing:20px; 
+        border-spacing:50px; 
             
                 text-decoration:none;
                 color: $blue;
@@ -42,21 +45,22 @@
     }
 
         a {
-            color: $grey;
+            color: orange;
             text-decoration: none;
             &:hover {
-                color:black;
+                color:rgb(211, 203, 203);
         }
     }
         &:hover{
            
-            border-bottom:1px solid black;
+            border-bottom:1px solid rgb(231, 231, 231);
+           
         }
       
             .nav-link-active{
-                border-bottom: 1px solid black; 
-                     
-                color: black;
+                border-bottom: 1px solid rgb(231, 231, 231);; 
+                
+                color: rgb(231, 231, 231);
                      
                 
             }               

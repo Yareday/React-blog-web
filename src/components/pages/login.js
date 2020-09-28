@@ -26,20 +26,20 @@ export default class Login extends Component {
         axios.post("https://api.devcamp.space/sessions", 
         {
             client: {
-                email: "",
-                password:"" 
+                email: this.state.email,
+                password: this.state.password
             }
         },
-        { withCredentials: false }
+        { withCredentials: true }
         ).then(response => {
-            if (response.data.status !== 'created') {
+            if (response.data.status === 'created') {
                 this.props.handleSuccessfulAuth();
                
             } else {
                 this.setState({
                     errorText:"Wrong email or password"
                 });
-                this.props.handleUnuccessfulAuth();
+                this.props.handleUnsuccessfulAuth();
             }
         })
         .catch(error => {
@@ -55,15 +55,28 @@ export default class Login extends Component {
     render() {
         return(
             <div>
-                
+                <h2> LOGIN TO ACCESS YOUR DASHBOARD</h2>
                 <div>{this.state.errorText}</div>
                 <form onSubmit={this.handleSubmit}>
-                 
+                  <input 
+                  type="email"
+                  name="email"
+                  placeholder="your email"
+                  value={this.state.email}
+                  onChange={this.handleChange}
+                  />
+                  <input 
+                  type="password"
+                  name="password"
+                  placeholder="your password"
+                  value={this.state.password}
+                  onChange={this.handleChange}
+                  />
                   
-                
-                      <button type="submit" className="but"> PRESS TO CONTINUE </button>
+                  <div>
+                      <button type="submit">Login</button>
                       
-                  
+                  </div>
                  
                 </form>
                
@@ -76,3 +89,5 @@ export default class Login extends Component {
     
    
 }
+
+                                                  

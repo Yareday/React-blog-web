@@ -6,8 +6,8 @@ export default class Login extends Component {
     super(props);
 
     this.state = {
-        email:"",
-        password:"",
+        email:"simon.tesfaye1@gmail.com",
+        password:"simon123123123123",
         errorText:""
     };
        
@@ -26,20 +26,20 @@ export default class Login extends Component {
         axios.post("https://api.devcamp.space/sessions", 
         {
             client: {
-                email: "",
-                password:"" 
+                email: this.state.email,
+                password: this.state.password
             }
         },
-        { withCredentials: false }
+        { withCredentials: true }
         ).then(response => {
-            if (response.data.status !== 'created') {
+            if (response.data.status === 'created') {
                 this.props.handleSuccessfulAuth();
                
             } else {
                 this.setState({
                     errorText:"Wrong email or password"
                 });
-                this.props.handleUnuccessfulAuth();
+                this.props.handleUnsuccessfulAuth();
             }
         })
         .catch(error => {
@@ -57,20 +57,15 @@ export default class Login extends Component {
             <div>
                 
                 <div>{this.state.errorText}</div>
-                <form onSubmit={this.handleSubmit} id="myform" method="post">
+                <form onSubmit={this.handleSubmit}>
                  
                   
-                
-                      <button type="submit" className="but"> PRESS TO CONTINUE </button>
+                  <div>
+                      <button type="submit">Continue</button>
                       
-                  
+                  </div>
                  
                 </form>
-                <script>
-                    function myform {
-                          document.myform.submit()
-                    }
-                </script>
                
             </div>
             
@@ -81,3 +76,5 @@ export default class Login extends Component {
     
    
 }
+
+                                                  

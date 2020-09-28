@@ -1,18 +1,21 @@
 .one-column{
    @include base-grid();
     grid-template-columns: 1fr;
-
+    color:rgb(63, 57, 57);
+    .one-color{
+        color: #4CAF50 !important;
+    }
 }
 
 .two-column{
     @include base-grid();
     grid-template-columns: 1fr 1fr;
-    
+    color:rgb(63, 57, 57);
     
 }
 
 .three-column{
     @include base-grid();
     grid-template-columns: 1fr 1fr 1fr;
-    
+    color:rgb(63, 57, 57);
 }

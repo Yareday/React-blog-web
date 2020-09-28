@@ -31,6 +31,7 @@ const NavigationComponent = (props) => {
  
 
         return(
+          
             <div className="nav-wrapper ">
                 <div className="left-side">
                     <div className="nav-link-wrapper">
@@ -55,8 +56,8 @@ const NavigationComponent = (props) => {
             </NavLink>
            </div>
            
+         
 
-               
                {props.loggedInStatus === "LOGGED_IN" ? (
                    dynamicLink("/portfolio-manager", "PortfolioManager")
                 ) : null}

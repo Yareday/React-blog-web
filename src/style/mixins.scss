@@ -6,7 +6,7 @@ font-weight:500;
 border:1px solid transparent;
 transition:all 0.5s ease-in-out;
 background-color: $dark-teal;
-color:white;
+color:rgb(255, 255, 255);
 
 &:active,
  &:focus {
@@ -42,4 +42,5 @@ color:white;
 @mixin base-grid() {
     display: grid;
     grid-gap: 21px;
+    
 }

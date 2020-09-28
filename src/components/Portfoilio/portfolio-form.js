@@ -163,14 +163,16 @@ export default class PortfolioForm extends Component {
                     </select>
                 </div>
                 <div className="one-column">
+                    <div className="one-color">
                     <textarea
+                
                     type="text"
                     name="description"
                     placeholder="Description"
                     value={this.state.description}
                     onChange={this.handleChange}
                     />
-            
+                  </div>
                 </div>
 
                 <div className="image-uploaders">

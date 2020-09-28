@@ -1,0 +1,12 @@
+body {
+  margin: 0px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+/*# sourceMappingURL=base.css.map */

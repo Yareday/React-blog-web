@@ -61,6 +61,7 @@
     "react": "16.13.1",
     "react-dom": "^16.13.1",
     "react-dropzone-component": "^3.2.0",
+    "react-elasticsearch": "^2.0.0",
     "react-facebook-login": "^4.1.1",
     "react-firebaseui": "^4.1.0",
     "react-github-login": "^1.0.3",

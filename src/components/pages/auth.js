@@ -16,7 +16,7 @@ export default class Facebook extends Component {
       this.props.history.push("/");
   }
   handleUnsuccessfulAuth(){
-      this.props.handleUnuccessfulLogin();
+      this.props.handleUnsuccessfulLogin();
   }
   state ={
     isLoggedIn:false,

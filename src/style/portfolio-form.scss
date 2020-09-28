@@ -1,9 +1,9 @@
 .portfolio-form-wrapper {
    @include base-grid();
     grid-template-columns: 1fr;
-  
+    
     padding:42px;
-
+    color:rgb(63, 57, 57);
     @include input-element();
     input {
         margin-bottom: 0px;
@@ -11,6 +11,7 @@
     .image-uploaders{
         @include base-grid();
         grid-template-columns: 200px 200px 200px;
+        color:rgb(63, 57, 57);
         
     }
 }
