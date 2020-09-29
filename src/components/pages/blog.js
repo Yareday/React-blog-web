@@ -1,15 +1,34 @@
+import React, { useState } from "react";
 
-import React from 'react';
-import { Link } from "react-router-dom";
+import PayPal from "../../components/PayPal";
 
-export default function() {
-    return(
-        <div>
-            <h2>Blog</h2>
-        <div>
-            <Link to="/about-me">Read more about myself</Link>
+function Blog() {
+    
+  const [checkout, setCheckOut] = useState(false);
+
+  return (
+      
+    <div className="App">
+        <div className="bloghelp">
+            <h1>Want to see the blogs</h1> 
+           
+
         </div>
-        </div>
-
-    );
+        <div className="donation">
+                <h2>Donate a little, Amazing blogs will appear very soon! </h2>
+            </div>
+      {checkout ? (
+        <PayPal />
+      ) : (
+        <button
+          onClick={() => {
+            setCheckOut(true);
+          }}
+        >
+          Contribute here        </button>
+      )}
+    </div>
+  );
 }
+
+export default Blog;

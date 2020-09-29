@@ -12,7 +12,7 @@ export default class Portcontainer extends Component {
   };
 
     this.state={
-      pageTitle: "Welcome to my portfolio",
+      pageTitle: "SimonSays Portfolio",
       isLoading: false,
       data: []
   };
@@ -71,7 +71,7 @@ componentDidMount(){
 
      );
      return (
-       <div>
+       <div className="verticalspace">
          <div className="searchrow">
                     <div className="search-outer">
 					<form
@@ -107,12 +107,7 @@ componentDidMount(){
      
     
           <div className="portfolio-items-wrapper">
-         <button className="btn" onClick={() => this.handleFilter('eCommerce')}>
-          Lifestyle</button>
-        <button className="btn" onClick={() => this.handleFilter('Scheduling')}>
-          Technology</button>
-        <button className="btn" onClick={() => this.handleFilter('Enterprise')}>
-          News</button>
+         
           
     
         {this.portfolioItems()}</div>
