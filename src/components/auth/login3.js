@@ -60,8 +60,8 @@ export default class Logil extends Component {
                 <form onSubmit={this.handleSubmit}>
                  
                   
-                  <div>
-                      <button type="submit">Continue</button>
+                  <div className="martha">
+                      <button type="submit" display="none">Login</button>
                       
                   </div>
                  

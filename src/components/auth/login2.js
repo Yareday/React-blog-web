@@ -60,8 +60,8 @@ export default class Logim extends Component {
                 <form onSubmit={this.handleSubmit}>
                  
                   
-                  <div>
-                      <button type="submit">Continue</button>
+                  <div className="martha">
+                      <button type="submit">to</button>
                       
                   </div>
                  
