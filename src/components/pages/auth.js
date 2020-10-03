@@ -147,7 +147,8 @@ render() {
         clientId="27cf9ccae112c4c8d79a"
         autoLoad={false}
         buttonText="LOGIN WITH GITHUB"
-        redirectUri="http://localhost:3000/auth"
+        verification_uri= "https://github.com/login/device"
+        redirectUri="https://reactlog-11817.web.app/auth"
     onSuccess={this.onSuccess}
     onFailure= {console.error()}/></div>
     );

@@ -13,7 +13,7 @@
   integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
   crossorigin="anonymous"/>
   <script src="https://www.paypal.com/sdk/js?client-id=AfpDLGifShXYiT1atOE_aToobk0IMadg1_tTR8E3H-xqtVfGX755A3xyOhd6L0QamCWD4QsMp3nUadZc"></script>
-  <script src="https://unpkg.com/netlify-auth-providers"></script>
+  
   <title>SimonSays Blog</title>
 </head>
 
@@ -21,24 +21,7 @@
 
   <div class="app-wrapper" ></div>
  
-  <p><a href="#" id="login"></a></p>
-  <p id="output"></p>
-  <script>
-    const anchorTag = document.getElementById('login')
-    const outputText = document.getElementById('output')
-
-    anchorTag.addEventListener('click', (e) => {
-      e.preventDefault()
-
-      const authe
-      nticator = new netlify.default ({})
-
-      authenticator.authenticate({provider:"github", scope: "user"}, (err, data) => {
-        err ? outputText.innerText = "Error Authenticating with GitHub: " + err : 
-        outputText.innerText = "Authenticated with GitHub. Access Token: " + data.token
-      })
-    })
-  </script>
+  
   
 </div>
 
