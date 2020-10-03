@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import Login from "../auth/login";
+import Logim from "../auth/login2";
+import Logil from "../auth/login3";
 import FacebookLogin from 'react-facebook-login';
 import GoogleLogin from 'react-google-login';
 import GitHubLogin from 'react-github-login';
 
 
-export default class Facebook extends Component {
+export default class Auth extends Component {
    constructor(props){
        super(props);
        this.handleSuccessfulAuth = this.handleSuccessfulAuth.bind(this);
@@ -46,15 +48,17 @@ export default class Facebook extends Component {
             googleID:response.googleID,
             name:response.name,
             email:response.email
+            
         });
     };
-    responseFacebook = response => {
+    responseFacebook = (response) => {
         //  console.log(response);
          this.setState({
              isLoggedIn:true,
              userID:response.userID,
              name:response.name,
-             email:response.email
+             email:response.email,
+             xfbml:true
          });
           };
           
@@ -76,11 +80,11 @@ render() {
 
     if(this.state.isLoggedIn) {
         fbContent=(
-            
-        <Login
+          
+        <Logil
             handleSuccessfulAuth = {this.handleSuccessfulAuth}
             handleUnsuccessfulAuth = {this.handleUnsuccessfulAuth}
-        />
+        /> 
         )
         
     }else {
@@ -89,7 +93,7 @@ render() {
   appId="643048623016626"
   autoLoad={false}
   fields="name,email,picture"
-  onClick={this.componentClicked}
+  xfbml={true}
   callback={this.responseFacebook}
   onFailure= {console.error()} /></div>
         );
@@ -130,9 +134,10 @@ render() {
   if(this.state.isLoggedIn) {
     gitContent=(
         
-    <Login
+    <Logim
         handleSuccessfulAuth = {this.handleSuccessfulAuth}
         handleUnsuccessfulAuth = {this.handleUnsuccessfulAuth}
+        style="display:none"
     />
     )
     
@@ -155,14 +160,15 @@ return (
   
 <div className="fby">
     <div className="fbyg">
-    <div className='ggbtn'>
-    {fbContent}</div>   
-    <div className='fbbtn'>{ggContent}
+   
+    <div className='ggbtn'>{ggContent}
     </div> 
    
     
     <div className='gitbtn'>
     {gitContent}</div>
+    <div className='fbbtn'>
+    {fbContent}</div>   
     </div>
     </div>
 
