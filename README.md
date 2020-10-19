@@ -1,4 +1,7 @@
 # Blog project
 
-# Blog-with-react
+  ReactJS, NodeJS
+Social Logins,
+API's
+Payment systems
 
